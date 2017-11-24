@@ -1,0 +1,94 @@
+/** { margin: 0; padding: 0 }*/
+body { background: #FFF; color: #394052; font-size: 14px; font-family: "PT serif",微軟正黑體,微软雅黑,华文细黑,Microsoft Yahei,Hiragino Sans GB,sans-serif; line-height: 1.2 }
+ul li { list-style-type: square }
+.btn { cursor: pointer }
+#jPlayer { position: relative; width: 250px; height: 63px; box-sizing: border-box; background: rgb(255,255,255); font-size: 0.85em; border: 1px solid #DEDEDE; border-top: 0; }
+#jPlayer { transition: all .5s ease; }
+#jPlayer .progress {  width: 100%; height: 3px; background: #eee; cursor: ew-resize }
+#jPlayer .progress .before, #jPlayer .progress .after { display: inline-block; float: left; height: 100% }
+#jPlayer .progress .before {/* width: 30%;*/ background: #1abc9c }
+/*#jPlayer .progress .after { width: 70%; background: #eee } */
+
+#jPlayer .playBody .cover { display: inline-block; float: left; width: 60px; height: 60px; border: 0px solid #333;  border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 50%; -o-border-radius: 50%; -ms-border-radius: 50%; -khtml-border-radius: 50%; overflow: hidden; cursor: pointer }
+#jPlayer .playBody .cover img { height: 100%; border-radius: 99%; cursor: pointer; }
+#jPlayer .playBody .control { padding-left: 70px; height: 60px }
+#jPlayer .playBody .control .musicTag, #jPlayer .playBody .control .lrc { user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; height: 16px; line-height: 16px; width: 158px; overflow: hidden; }
+#jPlayer .playBody .control .musicTag, #jPlayer .playBody .control .lrc, #jPlayer .playBody .control .menu { font-size: 0.85em; text-overflow: ellipsis; padding-right: 10px; white-space: nowrap;}
+
+#jPlayer .playBody .control .menu { height: 28px; line-height: 28px; }
+
+
+#jPlayer .playBody .control .menu .timer { display: inline-block; float: left; color: #5f5f5f; vertical-align: middle }
+
+#jPlayer .playBody .control .menu .btnGroup { float: left; padding: 0 20px; }
+
+#jPlayer .playBody .control .menu .btnGroup .btn { padding: 0 5px; }
+
+#jPlayer .iconfont { float: left; font-size: 20px; color: #898989; }
+#jPlayer .icon-pre, #jPlayer .icon-next  {font-size: 12px }
+
+#jPlayer .iconfont:active, #jPlayer .iconfont:hover { opacity: 0.75 }
+
+#jPlayer .playBody .control .menu .option { float: right; }
+
+#jPlayer .playlist { position: absolute; top: 63px; margin: 0; padding: 0; margin-left: -1px; width: 100%; border: 1px solid #DEDEDE; border-top: 0; }
+#jPlayer .playlist li { cursor: pointer; text-overflow: ellipsis; list-style-position: inside; cursor: default; line-height: 2em;padding: 3px 15px; }
+#jPlayer .playlist li:hover, #jPlayer .playlist li.playing { color: #716e6e; font-weight: bold; border-left: 3px solid #1abc9c; padding: 3px 15px 3px 11px; }
+
+#jPlayer .playlist .artist { float: right; }
+
+li, li:hover:before, li:hover:after {
+    transition: .2s;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@-moz-keyframes rotate {
+    from {
+        -moz-transform: rotate(0deg)
+    }
+
+    to {
+        -moz-transform: rotate(360deg)
+    }
+}
+
+@-ms-keyframes rotate {
+    from {
+        -ms-transform: rotate(0deg)
+    }
+
+    to {
+        -ms-transform: rotate(360deg)
+    }
+}
+
+@-o-keyframes rotate {
+    from {
+        -o-transform: rotate(0deg)
+    }
+
+    to {
+        -o-transform: rotate(360deg)
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mp3 player demo.</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.marquee.min.js"></script>
+    <script type="text/javascript" src="js/mp3Player.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_292851_tq3xx3t6awuvunmi.css">
+    <link rel="stylesheet" type="text/css" href="css/mp3Player.css">
+</head>
+<body>
+    
+    <script type="text/javascript">
+        var  playlist = [
+                            {
+                                title: "春风吹（Cover 方大同）",
+                                artist: "锦零",
+                                mp3: "music/1.mp3",
+                                cover: "album/1.jpg",
+                                lrc: "lrc/1.lrc"
+                            },
+                           {
+                                title: "Look at Me Now",
+                                artist: "Charlie Puth",
+                                mp3: "music/2.mp3",
+                                cover: "album/2.jpg",
+                                lrc: "lrc/2.lrc"
+                            },
+                            {
+                                title: "文爱",
+                                artist: "CG",
+                                mp3: "music/3.mp3",
+                                cover: "album/3.jpg",
+                                lrc: "lrc/3.lrc"
+                            }
+                        ];
+        // 执行
+        $(function() {
+            Player.init(playlist, true);
+        });
+    </script>
+</body>
+</html>
