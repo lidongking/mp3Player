@@ -14,38 +14,38 @@
         'lrcp': [],
         'template': '<div id="jPlayer" class="jPlayer">'
                 +   '    <!-- 进度条 开始 -->'
-                +   '   <div class="progress">'
-                +   '       <span class="before"></span>'
-                +   '       <span class="after"></span>'
+                +   '    <div class="progress">'
+                +   '        <span class="before"></span>'
+                +   '        <span class="after"></span>'
+                +   '     </div>'
+                +   '    <!-- 进度条 结束 -->'
+                +   '    <!-- 播放器主体 开始 -->'
+                +   '    <div class="playBody">'
+                +   '        <span class="cover">'
+                +   '            <img src="#">'
+                +   '        </span>'
+                +   '        <div class="control">'
+                +   '            <div class="musicTag"><strong><!-- musicTitle --></strong>-<span class="artist"><!-- musicSinger --></span></div>'
+                +   '            <div class="lrc"><!-- musicLRC... --></div>'
+                +   '            <div class="menu">'
+                +   '                <span class="timer"><!-- musicTimer --></span>'
+                +   '                <div class="btnGroup">'
+                +   '                    <span class="btn btn-pre iconfont icon-pre"></span>'
+                +   '                    <span class="btn btn-play iconfont icon-play"></span>'
+                +   '                    <span class="btn btn-next iconfont icon-next"></span>'
+                +   '                </div>'
+                +   '                <div class="option">'
+                +   '                    <!-- <span class="btn btn-like iconfont icon-like"></span> -->'
+                +   '                    <span class="btn btn-list iconfont icon-list"></span>'
+                +   '                </div>'
+                +   '            </div>'
+                +   '        </div>'
                 +   '    </div>'
-                +   '   <!-- 进度条 结束 -->'
-                +   '   <!-- 播放器主体 开始 -->'
-                +   '   <div class="playBody">'
-                +   '       <span class="cover">'
-                +   '           <img src="#">'
-                +   '       </span>'
-                +   '       <div class="control">'
-                +   '           <div class="musicTag"><strong><!-- 皮皮虾，我们走 --></strong>-<span class="artist"><!-- MC沫芯 --></span></div>'
-                +   '           <div class="lrc"><!-- 这里是歌词部分... --></div>'
-                +   '           <div class="menu">'
-                +   '               <span class="timer">0:55</span>'
-                +   '               <div class="btnGroup">'
-                +   '                   <span class="btn btn-pre iconfont icon-pre"></span>'
-                +   '                   <span class="btn btn-play iconfont icon-play"></span>'
-                +   '                   <span class="btn btn-next iconfont icon-next"></span>'
-                +   '               </div>'
-                +   '               <div class="option">'
-                +   '                   <!-- <span class="btn btn-like iconfont icon-like"></span> -->'
-                +   '                   <span class="btn btn-list iconfont icon-list"></span>'
-                +   '               </div>'
-                +   '           </div>'
-                +   '       </div>'
-                +   '   </div>'
-                +   '   <!-- 播放器主体 结束 -->'
-                +   '   <!-- 播放列表 开始 -->'
-                +   '   <ol class="playlist">'
-                +   '  </ol>'
-                +   '  <!-- 播放列表 结束 -->'
+                +   '    <!-- 播放器主体 结束 -->'
+                +   '    <!-- 播放列表 开始 -->'
+                +   '    <ol class="playlist">'
+                +   '    </ol>'
+                +   '    <!-- 播放列表 结束 -->'
                 +   '</div>',
 
         'init': function(playlist, play) {
@@ -111,11 +111,9 @@
             Player.isplaying = true;
             Player.rotateId = setInterval(Player.updateProgress, 500);
             // 配图动画播放
-            Player.wrapper.find(".cover img").css("animation", "9.8s linear 0s normal none infinite rotate");
-            Player.wrapper.find(".cover img").css("animation-play-state", "running");
+            Player.wrapper.find(".cover img").css("animation", "9.8s linear 0s normal none infinite rotate").css("animation-play-state", "running");
             // 按钮样式切换
-            Player.wrapper.find('.btn-play').removeClass('icon-play');
-            Player.wrapper.find('.btn-play').addClass('icon-pause');
+            Player.wrapper.find('.btn-play').removeClass('icon-play').addClass('icon-pause');
         },
 
         'ended': function() {
@@ -140,8 +138,7 @@
             // 配图动画暂停
             Player.wrapper.find(".cover img").css("animation-play-state", "paused");
             // 按钮样式切换
-            Player.wrapper.find('.btn-play').removeClass('icon-pause');
-            Player.wrapper.find('.btn-play').addClass('icon-play');
+            Player.wrapper.find('.btn-play').removeClass('icon-pause').addClass('icon-play');
 
             clearInterval(Player.rotateId);
         },
